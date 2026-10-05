@@ -79,7 +79,7 @@ main {
 .panel-head{
     border-bottom: 1px solid var(--border-color);
     display: flex;
-    padding: 15px 25px;
+    padding: 10px 25px;
     justify-content: space-between;
     align-items: center;
 }
@@ -328,6 +328,89 @@ main {
     transition: .2s;
     background-color: #c53939;
     color: #3c0c0c;
+}
+
+/* ESTOQUE */
+
+.add-peca {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.add-peca button {
+    color: white;
+    background-color: var(--color4);
+    padding: 10px 20px;
+    font-family: "Inter";
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.painel-estoque-head {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.painel-estoque-head > div {
+    font-family: "Inter";
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.rw-peca {width: 33%;}
+.rw-quant {width: 15%;}
+.rw-min {width: 10%;}
+.rw-preco {width: 15%;}
+.rw-status {width: 12%;}
+.rw-apagar {width: 10%;}
+
+.rw-peca,
+.rw-min,
+.rw-preco {
+    font-family: "inter";
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.rw-quant > input {
+    width: 50%;
+    border: none;
+    padding: 3px 7px;
+    border-radius: 7px;
+    font-family: "inter";
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-color);
+}
+
+.rw-status > span {
+    border-radius: 7px;
+    padding: 3px 14px;
+    font-family: "inter";
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.rw-quant > input:focus {
+    outline: 1px solid var(--border-color);
+}
+
+
+.panel-body .rw-apagar > button {
+    background-color: #c53939;
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 7px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
 @media screen and (max-width: 769px) {
