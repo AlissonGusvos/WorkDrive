@@ -36,3 +36,22 @@ botoes.forEach(botao => {
 });
 
 carregarPagina("home");
+
+
+// MENU
+
+const menuToggle = document.querySelector('.menu-toggle');
+const sidebar = document.querySelector('.sidebar-nav');
+
+menuToggle.addEventListener('click', () => {
+    const aberta = sidebar.classList.toggle('aberta');
+    menuToggle.textContent = aberta ? '✕' : '☰';
+});
+
+// fecha o menu ao escolher uma página
+sidebar.addEventListener('click', (e) => {
+    if (e.target.closest('.menu-item')) {
+        sidebar.classList.remove('aberta');
+        menuToggle.textContent = '☰';
+    }
+});

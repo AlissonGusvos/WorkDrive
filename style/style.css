@@ -520,18 +520,97 @@ main {
     outline: none;
 }
 
+/* BOTÃO FLUTUANTE DO MENU */
+
+.menu-toggle {
+    display: none;
+    margin-bottom: 15px;
+    margin-right: 15px;
+}
+
 @media screen and (max-width: 769px) {
+    .sidebar-nav {
+        display: none;
+        box-shadow: 4px 0 20px rgba(0, 0, 0, 0.12);
+    }
+    .sidebar-nav.aberta {
+        display: flex;
+    }
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 52px;
+        height: 52px;
+        border: none;
+        border-radius: 50%;
+        background-color: var(--color4);
+        color: white;
+        font-size: 22px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+    #main-container {
+        margin-left: 0;
+        max-width: 100vw;
+        padding: 30px;
+    }
     .results-section{
         flex-wrap: wrap;
     }
     .box-content.w25 {
         width: 49%;
     }
+    .kanban {
+        flex-direction: column;
+        gap: 20px;
+    }
 }
 
 @media screen and (max-width: 426px) {
-    .sidebar-nav {display: none;}
-    #main-container{max-width: 100vw; margin-left: 0;}
+    #main-container{padding: 20px;}
     .results-section{flex-wrap: wrap;}
     .box-content.w25 {width: 100%;}
+    .panel-head {
+        padding: 10px 15px;
+    }
+    .panel-row {
+        padding: 15px;
+        gap: 10px;
+    }
+    .ordem-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    .head-client-info {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .rw-peca {width: 28%;}
+    .rw-quant {width: 14%;}
+    .rw-preco {width: 16%;}
+    .rw-apagar {width: 14%;}
+    .rw-peca,
+    .rw-min,
+    .rw-preco {
+        font-size: 11px;
+    }
+    .rw-quant > input {
+        width: 100%;
+    }
+    .rw-status > span {
+        padding: 3px 8px;
+    }
+    .panel-body .rw-apagar > button {
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+    .card-row-3 {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
 }
