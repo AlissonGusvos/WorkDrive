@@ -3,7 +3,28 @@
         <h1 class="title">Estoque</h1>
     </div><!--TITLE CONTAINER-->
 
-    <div class="add-peca"><button>Adicionar item</button></div>
+    <div class="add-peca"><button type="button" id="abrir-modal">Adicionar item</button></div>
+
+    <section class="background-black">
+        <div id="modal">
+            <div class="modal-head">
+                <h3>Adicionar item</h3>
+                <button type="button">X</button>
+            </div><!--HAED MODAL-->
+
+            <form id="formulario">
+                <input type="text" placeholder="Nome do item:">
+                <input type="number" placeholder="Quantidade" min="0" step="1">
+                <input type="number" placeholder="Quantidade mínima:" min="0" step="1">
+                <input type="number" placeholder="Preço:" min="0.01">
+
+                <div class="form-opt">
+                    <button type="button" id="form-save">Salvar</button>
+                    <button type="button" id="form-cancel">Cancelar</button>
+                </div><!--OPÇOES DO FORM-->
+            </form>
+        </div><!--MODAL-->
+    </section>
 
     <div class="panel">
         <div class="panel-head">

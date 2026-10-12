@@ -48,7 +48,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.textContent = aberta ? '✕' : '☰';
 });
 
-// fecha o menu ao escolher uma página
+// Fecha o menu
 sidebar.addEventListener('click', (e) => {
     if (e.target.closest('.menu-item')) {
         sidebar.classList.remove('aberta');
