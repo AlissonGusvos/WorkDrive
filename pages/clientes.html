@@ -3,40 +3,29 @@
         <h1 class="title">Clientes e Veículos</h1>
     </div><!--TITLE CONTAINER-->
 
-    <div class="box-content">
-        <div class="head-client-info">
-            <div class="client-info">
-                <h4 class="client-name">Renata Ferreira</h4>
-                <span class="client-phone">(11) 97711-2233</span>
-            </div><!--CLIENT INFO-->
-            <div class="info-opt">
-                <button class="add-veiculo">+ Veículo</button>
-                <button class="del-client">Excluir</button>
-            </div><!--INFO OPT-->
-        </div><!--HEAD CLIENT INFO-->
+    <div class="add-peca"><button type="button" id="abrir-modal-cliente">Adicionar cliente</button></div>
 
-        <div class="info-veiculo">
-            <div class="placa">BRC4E19</div>
-            <span>Honda Civic • 2019</span>
-        </div><!--INFO VEICULO-->
-    </div><!--BOX CONTENT-->
+    <section class="background-black" id="fundo-modal-cliente" aria-hidden="true">
+        <div id="modal">
+            <div class="modal-head">
+                <h3>Adicionar cliente</h3>
+            </div><!--HEAD MODAL-->
 
-    <div class="box-content">
-        <div class="head-client-info">
-            <div class="client-info">
-                <h4 class="client-name">Renata Ferreira</h4>
-                <span class="client-phone">(11) 97711-2233</span>
-            </div><!--CLIENT INFO-->
-            <div class="info-opt">
-                <button class="add-veiculo">+ Veículo</button>
-                <button class="del-client">Excluir</button>
-            </div><!--INFO OPT-->
-        </div><!--HEAD CLIENT INFO-->
+            <form id="formulario">
+                <input id="nome-cliente" type="text" placeholder="Nome do cliente:" required>
+                <input id="telefone-cliente" type="tel" placeholder="Número de telefone:" required>
+                <input id="placa-cliente" type="text" placeholder="Placa do veículo:" required>
+                <input id="modelo-cliente" type="text" placeholder="Modelo do veículo:" required>
+                <input id="ano-cliente" type="number" placeholder="Ano do veículo:" min="1900" step="1" required>
 
-        <div class="info-veiculo">
-            <div class="placa">BRC4E19</div>
-            <span>Honda Civic • 2019</span>
-        </div><!--INFO VEICULO-->
-    </div><!--BOX CONTENT-->
+                <div class="form-opt">
+                    <button type="button" class="form-save" id="form-save-cliente">Salvar</button>
+                    <button type="button" class="form-cancel" id="form-cancel-cliente">Cancelar</button>
+                </div><!--OPÇÕES DO FORM-->
+            </form>
+        </div><!--MODAL-->
+    </section>
+
+    <div id="lista-clientes"></div>
 
 </main>

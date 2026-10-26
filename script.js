@@ -1,6 +1,8 @@
 const botoes = document.querySelectorAll("[data-page]");
 const conteudo = document.getElementById("main-container");
 
+// FUNCIONAMENTO DAS PAGINAS
+
 async function carregarPagina(pagina) {
     try {
         const resposta = await fetch(`pages/${pagina}.html`);
@@ -12,6 +14,11 @@ async function carregarPagina(pagina) {
         const html = await resposta.text();
 
         conteudo.innerHTML = html;
+        document.dispatchEvent(new Event(pagina + "Carregada"));
+
+        if (pagina === "estoque") {
+            carregarItens();
+        }
 
     } catch (e) {
         conteudo.innerHTML = "<h1>Erro ao carregar a página</h1>";
@@ -36,7 +43,6 @@ botoes.forEach(botao => {
 });
 
 carregarPagina("home");
-
 
 // MENU
 

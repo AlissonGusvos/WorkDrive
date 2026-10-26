@@ -5,18 +5,17 @@
 
     <div class="add-peca"><button type="button" id="abrir-modal">Adicionar item</button></div>
 
-    <section class="background-black">
+    <section class="background-black" id="fundo-modal" aria-hidden="true">
         <div id="modal">
             <div class="modal-head">
-                <h3>Adicionar item</h3>
-                <button type="button">X</button>
+                <h3 id="titulo-modal">Adicionar item</h3>
             </div><!--HAED MODAL-->
 
             <form id="formulario">
-                <input type="text" placeholder="Nome do item:">
-                <input type="number" placeholder="Quantidade" min="0" step="1">
-                <input type="number" placeholder="Quantidade mínima:" min="0" step="1">
-                <input type="number" placeholder="Preço:" min="0.01">
+                <input id="nome-item" type="text" placeholder="Nome do item:" required>
+                <input id="quantidade-item" type="number" placeholder="Quantidade" min="0" step="1" required>
+                <input id="minimo-item" type="number" placeholder="Quantidade mínima:" min="0" step="1" required>
+                <input id="preco-item" type="number" placeholder="Preço:" min="0.01" step="0.01" required>
 
                 <div class="form-opt">
                     <button type="button" id="form-save">Salvar</button>
@@ -38,43 +37,7 @@
             </div>
         </div><!--HEAD PAINEL-->
 
-        <div class="panel-body">
-            <div class="panel-row">
-                <div class="rw-peca">Filtro de óleo</div>
-                <div class="rw-quant"><input type="number" value="20" min="0"></div>
-                <div class="rw-min">5</div>
-                <div class="rw-preco">R$ 32,00</div>
-                <div class="rw-status"><span class="aceito">Ok</span></div>
-                <div class="rw-apagar"><button>Excluir</button></div>
-            </div><!--PANEL ROW-->
-
-            <div class="panel-row">
-                <div class="rw-peca">Filtro de óleo</div>
-                <div class="rw-quant"><input type="number" value="20" min="0"></div>
-                <div class="rw-min">5</div>
-                <div class="rw-preco">R$ 32,00</div>
-                <div class="rw-status"><span class="aceito">Ok</span></div>
-                <div class="rw-apagar"><button>Excluir</button></div>
-            </div><!--PANEL ROW-->
-
-            <div class="panel-row">
-                <div class="rw-peca">Filtro de óleo</div>
-                <div class="rw-quant"><input type="number" value="20" min="0"></div>
-                <div class="rw-min">5</div>
-                <div class="rw-preco">R$ 32,00</div>
-                <div class="rw-status"><span class="aceito">Ok</span></div>
-                <div class="rw-apagar"><button>Excluir</button></div>
-            </div><!--PANEL ROW-->
-
-            <div class="panel-row">
-                <div class="rw-peca">Filtro de óleo</div>
-                <div class="rw-quant"><input type="number" value="20" min="0"></div>
-                <div class="rw-min">5</div>
-                <div class="rw-preco">R$ 32,00</div>
-                <div class="rw-status"><span class="aceito">Ok</span></div>
-                <div class="rw-apagar"><button>Excluir</button></div>
-            </div><!--PANEL ROW-->
-        </div><!--PANEL BODY-->
+        <div class="panel-body" id="lista-estoque"></div><!--PANEL BODY-->
     </div><!--PAINEL-->
 
 </main>
