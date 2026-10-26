@@ -14,11 +14,7 @@ async function carregarPagina(pagina) {
         const html = await resposta.text();
 
         conteudo.innerHTML = html;
-        document.dispatchEvent(new Event(pagina + "Carregada"));
-
-        if (pagina === "estoque") {
-            carregarItens();
-        }
+        document.dispatchEvent(new Event(pagina));
 
     } catch (e) {
         conteudo.innerHTML = "<h1>Erro ao carregar a página</h1>";
